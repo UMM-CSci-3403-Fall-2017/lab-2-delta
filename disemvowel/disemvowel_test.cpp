@@ -12,16 +12,19 @@ TEST(Disemvowel, HandleNoVowels) {
 
 TEST(Disemvowel, HandleOnlyVowels) {
   ASSERT_STREQ("", disemvowel((char*) "aeiouAEIOUOIEAuoiea"));
+  //free(disemvowel((char*) "aeiouAEIOUOIEAuoiea"));
 }
 
 TEST(Disemvowel, HandleMorrisMinnesota) {
   ASSERT_STREQ("Mrrs, Mnnst",
 		      disemvowel((char*) "Morris, Minnesota"));
+  //free(disemvowel((char*) "Morris, Minnesota"));
 }
 
 TEST(Disemvowel, HandlePunctuation) {
   ASSERT_STREQ("n (nxplnd) lphnt!", 
 		      disemvowel((char*) "An (Unexplained) Elephant!"));
+ // free(disemvowel((char*) "An (Unexplained) Elephant!"));
 }
 
 TEST(Disemvowel, HandleLongString) {
@@ -42,6 +45,7 @@ TEST(Disemvowel, HandleLongString) {
   ASSERT_STREQ("xyz", disemvowel(str));
 
   free(str);
+  //free(disemvowel(str));
 }
 
 int main(int argc, char* argv[]) {

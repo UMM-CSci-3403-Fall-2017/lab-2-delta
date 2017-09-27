@@ -17,6 +17,7 @@ char* disemvowel(char* str) {
   char* result;
   len = strlen(str);
   
+  // Finds the number of letters that are not vowels for determining size of new string.
   for(i = 0; i < len; i++){
   if(!checkVowel(str[i])){
       notVowel++;	
