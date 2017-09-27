@@ -14,7 +14,7 @@ char* str_reverse(char* str) {
     result[i] = str[len-i-1];
   }
   result[len] = '\0';
-  
+
   return result;
 }
 
@@ -32,6 +32,8 @@ char* palindrome(char* str) {
     }
     ++i;
   }
+  
+  free(rev); 
 
   if (result) {
     answer = (char*) calloc(4, sizeof(char));
@@ -45,6 +47,6 @@ char* palindrome(char* str) {
     answer[1] = 'o';
     answer[2] = '\0';
   }
-
+ 
   return answer;
 }
